@@ -2,6 +2,6 @@
 
 Project created while learning to use 11ty.
 
-# Resourses used
+# Resources used
 
 https://learneleventyfromscratch.com/
