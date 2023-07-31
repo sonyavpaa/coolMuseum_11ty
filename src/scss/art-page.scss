@@ -1,0 +1,12 @@
+
+.gallery__item {
+    column-gap: 2em;
+    display: flex;
+width: 80%;
+}
+
+.gallery__item figcaption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

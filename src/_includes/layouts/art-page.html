@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+{% set pageHeaderTitle = title %}
+
+{% block content %}
+<article>
+This could be a cool header of an incredibly wack art collection
+</article>
+<div>
+    <div class="wrapper art-wrapper">
+        <article>
+            {% for item in collections.art %}
+            <figure class="[ gallery__item ] [ flow ]">
+                <div class="[ gallery__media ] [ frame ]" data-frame="primary">
+                    <img class="radius art-image" src="{{ item.data.hero.image }}"
+                    alt="{{ item.data.hero.imageAlt }}"
+                    />
+                </div>
+                <figcaption class="[ gallery__content ] [ flow ]">
+                    <h2 class="[ gallery__heading ] [ text-700 md:text-900 ]">
+                        {{ item.data.title }}
+                    </h2>
+                    <p class="[ gallery__summary ] [ measure-short flow-space-300 ]">
+                        {{ item.data.summary }}
+                    </p>
+                    <a href="{{ item.url }}">Check this art!</a>
+                    <p>(or, <a href="javascript:history.back()">go back --->)</a></p>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </article>
+    </div>
+</div>
+
+
+{% endblock %}

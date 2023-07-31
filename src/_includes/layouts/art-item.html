@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section>
+    <div class="left">
+        <h1>{{ title }}</h1>
+        <p>{{ summary }}</p>
+    </div>
+    <div class="right">
+        <img class="art-image" src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
+    </div>
+    <p>Cool, <a href="javascript:history.back()">go back ---></a></p>
+</section>
+
+{% endblock %}
