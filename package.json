@@ -28,6 +28,7 @@
     "gorko": "^0.9.1",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "html-minifier": "^4.0.0"
   }
 }
