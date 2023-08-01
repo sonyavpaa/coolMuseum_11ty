@@ -6,8 +6,8 @@ intro:
   main: 'cool museum tablet website'
   summary: 'Take a chance to scroll through this very interesting content'
   buttonText: 'About museum'
-  buttonUrl: '/museum'
-  image: '/images/museum/museum.webp'
+  buttonUrl: '/coolMuseum_11ty/museum'
+  image: '/coolMuseum_11ty/images/museum/museum.webp'
   imageAlt: ''
 ---
 
