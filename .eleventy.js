@@ -10,10 +10,10 @@ module.exports = config => {
         } )
       })
 
-      // // Watch CSS files for changes
-      // config.setBrowserSyncConfig({
-      //   files: './dist/css/**/*.css'
-      // });
+      // Watch CSS files for changes
+      config.setBrowserSyncConfig({
+        files: './dist/css/*.css'
+      });
 
       // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
       config.setUseGitIgnore(false);
