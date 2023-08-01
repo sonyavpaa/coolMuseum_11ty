@@ -9,6 +9,7 @@ intro:
   buttonUrl: '/coolMuseum_11ty/museum'
   image: '/coolMuseum_11ty/images/museum/museum.webp'
   imageAlt: ''
+home: '/'
 ---
 
 This is pretty _rad_, right?
