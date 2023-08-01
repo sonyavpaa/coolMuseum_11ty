@@ -2,11 +2,11 @@
     "items": [
       {
         "text": "Home",
-        "url": "/"
+        "url": "/coolMuseum_11ty"
       },
       {
         "text": "Art",
-        "url": "/art/"
+        "url": "/coolMuseum_11ty/art/"
       }
     ]
   }
