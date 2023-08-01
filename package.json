@@ -8,7 +8,7 @@
     "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
     "build:sass:prod": "sass src/scss:dist/css --style compressed",
     "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
-    "build:prod": "npm run build:eleventy:prod & npm run build:sass:prod",
+    "build:prod": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
     "watch:sass": "sass src/scss:dist/css --watch",
     "build:sass": "sass src/scss:dist/css",
     "watch:eleventy": "eleventy --serve",
