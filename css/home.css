@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+/**
+ * SIZE SCALE
+ * This is a Perfect Fourth scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default.
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+.intro {
+  display: grid;
+  grid-template-rows: 2.36rem minmax(0, 1fr) 2.36rem auto;
+  grid-gap: 1.33rem;
+}
+.intro > * {
+  grid-column: 1;
+}
+.intro__header {
+  padding: 0.75rem 1.33rem;
+  background: rgba(249, 249, 249, 0.95);
+  z-index: 1;
+  grid-row: 2;
+  margin: 0 1.33rem;
+  align-self: center;
+}
+.intro__heading em {
+  font-style: normal;
+  display: block;
+  transform: translateX(-3px);
+}
+.intro__media {
+  grid-row: 1/4;
+  position: relative;
+}
+.intro__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.intro__content {
+  grid-row: 4;
+}
+.intro__content p {
+  max-width: 30ch;
+}
+@media (min-width: 37em) {
+  .intro {
+    grid-template-rows: 1.33rem auto auto auto;
+    grid-template-columns: minmax(15rem, 1fr) 2fr;
+  }
+  .intro__header {
+    padding: 1.33rem;
+    margin: 0;
+    grid-column: 1/3;
+    justify-self: start;
+    align-self: end;
+  }
+  .intro__media {
+    grid-column: 3/2;
+    grid-row: 1/5;
+  }
+  .intro__content {
+    grid-row: 3/4;
+    grid-column: 1;
+  }
+}
+@media (min-width: 62em) {
+  .intro {
+    grid-template-columns: 1fr minmax(44rem, 1fr);
+  }
+  .intro__media {
+    height: 28rem;
+  }
+}
+
+.gallery__item {
+  column-gap: 2em;
+  display: flex;
+  width: 80%;
+}
+
+.gallery__item figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.art-image {
+  max-width: 20em;
+}
+
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+/**
+ * SIZE SCALE
+ * This is a Perfect Fourth scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default.
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+/**
+ * CORE CONFIG
+ * This powers everything from utility class generation to breakpoints
+ * to enabling/disabling pre-built components/utilities.
+ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don’t have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --flow-space: 1.77rem;
+}
+
+body {
+  color: #263147;
+  line-height: 1.5;
+  font-size: 1.33rem;
+  font-family: "Literata", Georgia, serif;
+}
+
+a:not([class]) {
+  color: currentColor;
+  text-decoration-color: #fa576e;
+}
+
+:focus {
+  outline: 2px dashed #513aa6;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  font-family: "Red Hat Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.1;
+}
+
+::selection {
+  color: #f9f4e3;
+  background: rgba(38, 49, 71, 0.99);
+}
+
+::-webkit-scrollbar {
+  height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 1px solid #505c73;
+  border-radius: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #38445b;
+  border-radius: 0.25rem;
+}
+
+.site-wrap svg {
+  height: 4em;
+  width: unset;
+}
+
+.site-head {
+  padding: 1.77rem 0;
+}
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-head__brand {
+  flex-shrink: 0;
+  margin-inline-end: 1.77rem;
+  transform: translateY(0.25rem);
+}
+.site-head__nav {
+  padding: 0.75rem 0;
+}
+@media (min-width: 37em) {
+  .site-head__brand svg {
+    width: 160px;
+  }
+}
+
+.nav {
+  line-height: 1;
+  font-weight: 900;
+  margin-top: -1rem;
+  margin-inline-start: -1rem;
+}
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav__list > * {
+  padding-top: 1rem;
+  padding-inline-start: 1rem;
+}
+.nav a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+.nav a[data-state=active]:before, .nav a[aria-current=page]:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.25rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.25rem;
+  background: #fc3e59;
+}
+
+/*# sourceMappingURL=home.css.map */
