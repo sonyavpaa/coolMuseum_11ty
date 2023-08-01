@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
     "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy",
-    "build:sass:prod": "sass src/static/scss:public/static/css --style compressed",
+    "build:sass:prod": "sass src/scss:public/static/css --style compressed",
     "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
     "build:prod": "npm run build:eleventy:prod & npm run build:sass:prod"
   },
